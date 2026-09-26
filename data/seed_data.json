@@ -1,0 +1,1040 @@
+{
+  "students": [
+    {
+      "id": 101,
+      "name": "Rahul",
+      "grade": 8
+    },
+    {
+      "id": 102,
+      "name": "Ananya",
+      "grade": 8
+    },
+    {
+      "id": 103,
+      "name": "Arjun",
+      "grade": 8
+    }
+  ],
+  "teachers": [
+    {
+      "id": 7,
+      "name": "Teacher A",
+      "experience": 8,
+      "verification_status": "verified"
+    },
+    {
+      "id": 8,
+      "name": "Teacher B",
+      "experience": 4,
+      "verification_status": "verified"
+    },
+    {
+      "id": 9,
+      "name": "Teacher C",
+      "experience": 2,
+      "verification_status": "pending"
+    }
+  ],
+  "subjects": [
+    {
+      "id": 1,
+      "name": "Mathematics"
+    }
+  ],
+  "topics": [
+    {
+      "id": 1,
+      "subject_id": 1,
+      "name": "Algebra"
+    },
+    {
+      "id": 2,
+      "subject_id": 1,
+      "name": "Linear Equations"
+    },
+    {
+      "id": 10,
+      "subject_id": 1,
+      "name": "Class 5 Mathematics"
+    },
+    {
+      "id": 11,
+      "subject_id": 1,
+      "name": "Class 6 Mathematics"
+    },
+    {
+      "id": 12,
+      "subject_id": 1,
+      "name": "Class 7 Mathematics"
+    },
+    {
+      "id": 13,
+      "subject_id": 1,
+      "name": "Class 8 Mathematics"
+    },
+    {
+      "id": 14,
+      "subject_id": 1,
+      "name": "Class 9 Mathematics"
+    }
+  ],
+  "concepts": [
+    {
+      "id": 1,
+      "topic_id": 2,
+      "name": "Basic Linear Equations"
+    },
+    {
+      "id": 2,
+      "topic_id": 2,
+      "name": "Variables on Both Sides"
+    },
+    {
+      "id": 3,
+      "topic_id": 2,
+      "name": "Transposition"
+    },
+    {
+      "id": 4,
+      "topic_id": 1,
+      "name": "Algebraic Expressions"
+    },
+    {
+      "id": 20,
+      "topic_id": 10,
+      "name": "Whole Numbers & Operations"
+    },
+    {
+      "id": 21,
+      "topic_id": 10,
+      "name": "Fractions & Decimals"
+    },
+    {
+      "id": 22,
+      "topic_id": 10,
+      "name": "Perimeter & Area"
+    },
+    {
+      "id": 23,
+      "topic_id": 11,
+      "name": "Integers"
+    },
+    {
+      "id": 24,
+      "topic_id": 11,
+      "name": "Fractions & Decimals"
+    },
+    {
+      "id": 25,
+      "topic_id": 11,
+      "name": "Ratio & Proportion"
+    },
+    {
+      "id": 26,
+      "topic_id": 12,
+      "name": "Rational Numbers"
+    },
+    {
+      "id": 27,
+      "topic_id": 12,
+      "name": "Algebraic Expressions"
+    },
+    {
+      "id": 28,
+      "topic_id": 12,
+      "name": "Simple Equations"
+    },
+    {
+      "id": 29,
+      "topic_id": 13,
+      "name": "Linear Equations"
+    },
+    {
+      "id": 30,
+      "topic_id": 13,
+      "name": "Exponents & Powers"
+    },
+    {
+      "id": 31,
+      "topic_id": 13,
+      "name": "Comparing Quantities"
+    },
+    {
+      "id": 32,
+      "topic_id": 14,
+      "name": "Number Systems"
+    },
+    {
+      "id": 33,
+      "topic_id": 14,
+      "name": "Polynomials"
+    },
+    {
+      "id": 34,
+      "topic_id": 14,
+      "name": "Coordinate Geometry"
+    }
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "concept_id": 1,
+      "question_text": "Solve: x + 5 = 12.",
+      "difficulty": "easy",
+      "correct_answer": "x = 7"
+    },
+    {
+      "id": 2,
+      "concept_id": 1,
+      "question_text": "Solve: 3x = 18.",
+      "difficulty": "easy",
+      "correct_answer": "x = 6"
+    },
+    {
+      "id": 3,
+      "concept_id": 2,
+      "question_text": "Solve: 2x + 4 = x + 9.",
+      "difficulty": "medium",
+      "correct_answer": "x = 5"
+    },
+    {
+      "id": 4,
+      "concept_id": 2,
+      "question_text": "Solve: 5x - 3 = 2x + 12.",
+      "difficulty": "medium",
+      "correct_answer": "x = 5"
+    },
+    {
+      "id": 5,
+      "concept_id": 2,
+      "question_text": "Solve: 3x + 7 = x + 17.",
+      "difficulty": "medium",
+      "correct_answer": "x = 5"
+    },
+    {
+      "id": 6,
+      "concept_id": 2,
+      "question_text": "Solve: 4x - 8 = 2x + 6.",
+      "difficulty": "medium",
+      "correct_answer": "x = 7"
+    },
+    {
+      "id": 7,
+      "concept_id": 3,
+      "question_text": "Solve: x - 9 = 4.",
+      "difficulty": "easy",
+      "correct_answer": "x = 13"
+    },
+    {
+      "id": 8,
+      "concept_id": 3,
+      "question_text": "Solve: 2x + 6 = 16.",
+      "difficulty": "easy",
+      "correct_answer": "x = 5"
+    },
+    {
+      "id": 9,
+      "concept_id": 4,
+      "question_text": "Simplify: 3x + 2x.",
+      "difficulty": "easy",
+      "correct_answer": "5x"
+    },
+    {
+      "id": 10,
+      "concept_id": 4,
+      "question_text": "Simplify: 4a + 3 - a.",
+      "difficulty": "easy",
+      "correct_answer": "3a + 3"
+    },
+    {
+      "id": 101,
+      "concept_id": 20,
+      "question_text": "What is 4,325 + 1,200?",
+      "difficulty": "easy",
+      "correct_answer": "5,525"
+    },
+    {
+      "id": 102,
+      "concept_id": 20,
+      "question_text": "Which number is greatest?",
+      "difficulty": "medium",
+      "correct_answer": "9,999"
+    },
+    {
+      "id": 103,
+      "concept_id": 21,
+      "question_text": "Which is equal to 0.5?",
+      "difficulty": "easy",
+      "correct_answer": "1/2"
+    },
+    {
+      "id": 104,
+      "concept_id": 21,
+      "question_text": "What is 0.25 as a fraction?",
+      "difficulty": "medium",
+      "correct_answer": "1/4"
+    },
+    {
+      "id": 105,
+      "concept_id": 22,
+      "question_text": "What is the perimeter of a square with side 6 cm?",
+      "difficulty": "easy",
+      "correct_answer": "24 cm"
+    },
+    {
+      "id": 106,
+      "concept_id": 22,
+      "question_text": "What is the area of a rectangle 5 cm by 4 cm?",
+      "difficulty": "medium",
+      "correct_answer": "20 cm²"
+    },
+    {
+      "id": 107,
+      "concept_id": 23,
+      "question_text": "What is -4 + 9?",
+      "difficulty": "easy",
+      "correct_answer": "5"
+    },
+    {
+      "id": 108,
+      "concept_id": 23,
+      "question_text": "What is 7 - 12?",
+      "difficulty": "medium",
+      "correct_answer": "-5"
+    },
+    {
+      "id": 109,
+      "concept_id": 24,
+      "question_text": "What is 0.75 as a fraction?",
+      "difficulty": "easy",
+      "correct_answer": "3/4"
+    },
+    {
+      "id": 110,
+      "concept_id": 24,
+      "question_text": "What is 1/2 + 1/4?",
+      "difficulty": "medium",
+      "correct_answer": "3/4"
+    },
+    {
+      "id": 111,
+      "concept_id": 25,
+      "question_text": "What is the ratio 6:3 in simplest form?",
+      "difficulty": "easy",
+      "correct_answer": "2:1"
+    },
+    {
+      "id": 112,
+      "concept_id": 25,
+      "question_text": "If 2 notebooks cost ₹40, what do 5 notebooks cost?",
+      "difficulty": "medium",
+      "correct_answer": "₹100"
+    },
+    {
+      "id": 113,
+      "concept_id": 26,
+      "question_text": "What is 1/2 + 1/3?",
+      "difficulty": "easy",
+      "correct_answer": "5/6"
+    },
+    {
+      "id": 114,
+      "concept_id": 26,
+      "question_text": "Which is greater?",
+      "difficulty": "medium",
+      "correct_answer": "3/4"
+    },
+    {
+      "id": 115,
+      "concept_id": 27,
+      "question_text": "Simplify: 3x + 2x.",
+      "difficulty": "easy",
+      "correct_answer": "5x"
+    },
+    {
+      "id": 116,
+      "concept_id": 27,
+      "question_text": "What is the coefficient of x in 7x + 4?",
+      "difficulty": "medium",
+      "correct_answer": "7"
+    },
+    {
+      "id": 117,
+      "concept_id": 28,
+      "question_text": "Solve: x + 8 = 15.",
+      "difficulty": "easy",
+      "correct_answer": "x = 7"
+    },
+    {
+      "id": 118,
+      "concept_id": 28,
+      "question_text": "Solve: 3x = 21.",
+      "difficulty": "medium",
+      "correct_answer": "x = 7"
+    },
+    {
+      "id": 119,
+      "concept_id": 29,
+      "question_text": "Solve: 2x + 3 = 11.",
+      "difficulty": "easy",
+      "correct_answer": "x = 4"
+    },
+    {
+      "id": 120,
+      "concept_id": 29,
+      "question_text": "Solve: 5x - 7 = 18.",
+      "difficulty": "medium",
+      "correct_answer": "x = 5"
+    },
+    {
+      "id": 121,
+      "concept_id": 30,
+      "question_text": "What is 2³?",
+      "difficulty": "easy",
+      "correct_answer": "8"
+    },
+    {
+      "id": 122,
+      "concept_id": 30,
+      "question_text": "What is 10²?",
+      "difficulty": "medium",
+      "correct_answer": "100"
+    },
+    {
+      "id": 123,
+      "concept_id": 31,
+      "question_text": "What is 20% of 150?",
+      "difficulty": "easy",
+      "correct_answer": "30"
+    },
+    {
+      "id": 124,
+      "concept_id": 31,
+      "question_text": "A ₹500 item has a 10% discount. What is the discount?",
+      "difficulty": "medium",
+      "correct_answer": "₹50"
+    },
+    {
+      "id": 125,
+      "concept_id": 32,
+      "question_text": "Which number is irrational?",
+      "difficulty": "easy",
+      "correct_answer": "√2"
+    },
+    {
+      "id": 126,
+      "concept_id": 32,
+      "question_text": "What is the decimal form of 1/2?",
+      "difficulty": "medium",
+      "correct_answer": "0.5"
+    },
+    {
+      "id": 127,
+      "concept_id": 33,
+      "question_text": "What is the degree of 4x³ + 2x?",
+      "difficulty": "easy",
+      "correct_answer": "3"
+    },
+    {
+      "id": 128,
+      "concept_id": 33,
+      "question_text": "Simplify: 2x + 3x - 4.",
+      "difficulty": "medium",
+      "correct_answer": "5x - 4"
+    },
+    {
+      "id": 129,
+      "concept_id": 34,
+      "question_text": "What is the x-coordinate of (3, 5)?",
+      "difficulty": "easy",
+      "correct_answer": "3"
+    },
+    {
+      "id": 130,
+      "concept_id": 34,
+      "question_text": "Which point lies on the y-axis?",
+      "difficulty": "medium",
+      "correct_answer": "(0, 4)"
+    }
+  ],
+  "assessments": [
+    {
+      "id": 1,
+      "student_id": 101,
+      "topic_id": 2,
+      "assessment_type": "diagnostic",
+      "created_at": "2026-09-26 08:00:00"
+    },
+    {
+      "id": 2,
+      "student_id": 102,
+      "topic_id": 2,
+      "assessment_type": "diagnostic",
+      "created_at": "2026-09-26 08:05:00"
+    },
+    {
+      "id": 3,
+      "student_id": 103,
+      "topic_id": 2,
+      "assessment_type": "diagnostic",
+      "created_at": "2026-09-26 08:10:00"
+    },
+    {
+      "id": 4,
+      "student_id": 103,
+      "topic_id": 2,
+      "assessment_type": "reassessment",
+      "created_at": "2026-09-26 09:00:00"
+    }
+  ],
+  "attempts": [
+    {
+      "id": 1,
+      "assessment_id": 1,
+      "student_id": 101,
+      "question_id": 3,
+      "answer": "x = 5",
+      "is_correct": 1,
+      "time_taken": 25,
+      "created_at": "2026-09-26 08:01:00"
+    },
+    {
+      "id": 2,
+      "assessment_id": 1,
+      "student_id": 101,
+      "question_id": 4,
+      "answer": "x = 5",
+      "is_correct": 1,
+      "time_taken": 27,
+      "created_at": "2026-09-26 08:02:00"
+    },
+    {
+      "id": 3,
+      "assessment_id": 1,
+      "student_id": 101,
+      "question_id": 5,
+      "answer": "x = 5",
+      "is_correct": 1,
+      "time_taken": 26,
+      "created_at": "2026-09-26 08:03:00"
+    },
+    {
+      "id": 4,
+      "assessment_id": 1,
+      "student_id": 101,
+      "question_id": 6,
+      "answer": "x = 7",
+      "is_correct": 0,
+      "time_taken": 42,
+      "created_at": "2026-09-26 08:04:00"
+    },
+    {
+      "id": 5,
+      "assessment_id": 2,
+      "student_id": 102,
+      "question_id": 3,
+      "answer": "x = 9",
+      "is_correct": 0,
+      "time_taken": 50,
+      "created_at": "2026-09-26 08:06:00"
+    },
+    {
+      "id": 6,
+      "assessment_id": 2,
+      "student_id": 102,
+      "question_id": 4,
+      "answer": "x = 15",
+      "is_correct": 0,
+      "time_taken": 55,
+      "created_at": "2026-09-26 08:07:00"
+    },
+    {
+      "id": 7,
+      "assessment_id": 2,
+      "student_id": 102,
+      "question_id": 5,
+      "answer": "x = 10",
+      "is_correct": 0,
+      "time_taken": 51,
+      "created_at": "2026-09-26 08:08:00"
+    },
+    {
+      "id": 8,
+      "assessment_id": 2,
+      "student_id": 102,
+      "question_id": 6,
+      "answer": "x = 14",
+      "is_correct": 0,
+      "time_taken": 58,
+      "created_at": "2026-09-26 08:09:00"
+    },
+    {
+      "id": 9,
+      "assessment_id": 3,
+      "student_id": 103,
+      "question_id": 3,
+      "answer": "x = 9",
+      "is_correct": 0,
+      "time_taken": 49,
+      "created_at": "2026-09-26 08:11:00"
+    },
+    {
+      "id": 10,
+      "assessment_id": 3,
+      "student_id": 103,
+      "question_id": 4,
+      "answer": "x = 12",
+      "is_correct": 0,
+      "time_taken": 53,
+      "created_at": "2026-09-26 08:12:00"
+    },
+    {
+      "id": 11,
+      "assessment_id": 3,
+      "student_id": 103,
+      "question_id": 5,
+      "answer": "x = 10",
+      "is_correct": 0,
+      "time_taken": 48,
+      "created_at": "2026-09-26 08:13:00"
+    },
+    {
+      "id": 12,
+      "assessment_id": 3,
+      "student_id": 103,
+      "question_id": 6,
+      "answer": "x = 14",
+      "is_correct": 0,
+      "time_taken": 56,
+      "created_at": "2026-09-26 08:14:00"
+    },
+    {
+      "id": 13,
+      "assessment_id": 4,
+      "student_id": 103,
+      "question_id": 3,
+      "answer": "x = 5",
+      "is_correct": 1,
+      "time_taken": 28,
+      "created_at": "2026-09-26 09:01:00"
+    },
+    {
+      "id": 14,
+      "assessment_id": 4,
+      "student_id": 103,
+      "question_id": 4,
+      "answer": "x = 5",
+      "is_correct": 1,
+      "time_taken": 30,
+      "created_at": "2026-09-26 09:02:00"
+    },
+    {
+      "id": 15,
+      "assessment_id": 4,
+      "student_id": 103,
+      "question_id": 5,
+      "answer": "x = 5",
+      "is_correct": 1,
+      "time_taken": 27,
+      "created_at": "2026-09-26 09:03:00"
+    },
+    {
+      "id": 16,
+      "assessment_id": 4,
+      "student_id": 103,
+      "question_id": 6,
+      "answer": "x = 7",
+      "is_correct": 1,
+      "time_taken": 29,
+      "created_at": "2026-09-26 09:04:00"
+    }
+  ],
+  "student_progress": [
+    {
+      "id": 1,
+      "student_id": 101,
+      "concept_id": 2,
+      "accuracy": 75,
+      "attempt_count": 4,
+      "status": "normal",
+      "updated_at": "2026-09-26 08:04:00"
+    },
+    {
+      "id": 2,
+      "student_id": 102,
+      "concept_id": 2,
+      "accuracy": 0,
+      "attempt_count": 4,
+      "status": "needs_intervention",
+      "updated_at": "2026-09-26 08:09:00"
+    },
+    {
+      "id": 3,
+      "student_id": 103,
+      "concept_id": 2,
+      "accuracy": 100,
+      "attempt_count": 4,
+      "status": "successful",
+      "updated_at": "2026-09-26 09:04:00"
+    }
+  ],
+  "interventions": [
+    {
+      "id": 1,
+      "student_id": 103,
+      "concept_id": 2,
+      "type": "teacher_session",
+      "teacher_id": 7,
+      "status": "successful",
+      "result": "Student improved from 0% to 100% on targeted reassessment.",
+      "created_at": "2026-09-26 08:40:00"
+    }
+  ],
+  "learning_resources": [
+    {
+      "id": 1,
+      "concept_id": 1,
+      "title": "Basic Linear Equations — Class 8 lesson",
+      "source": "YouTube",
+      "url": "https://www.youtube.com/results?search_query=Class+8+Mathematics+Basic+Linear+Equations+lesson+explained",
+      "description": "Concept-focused video lessons for Class 8 Basic Linear Equations.",
+      "resource_type": "video"
+    },
+    {
+      "id": 2,
+      "concept_id": 2,
+      "title": "Variables on Both Sides — Class 8 lesson",
+      "source": "YouTube",
+      "url": "https://www.youtube.com/results?search_query=Class+8+Mathematics+Variables+on+Both+Sides+lesson+explained",
+      "description": "Concept-focused video lessons for Class 8 Variables on Both Sides.",
+      "resource_type": "video"
+    },
+    {
+      "id": 3,
+      "concept_id": 3,
+      "title": "Transposition — Class 8 lesson",
+      "source": "YouTube",
+      "url": "https://www.youtube.com/results?search_query=Class+8+Mathematics+Transposition+lesson+explained",
+      "description": "Concept-focused video lessons for Class 8 Transposition.",
+      "resource_type": "video"
+    },
+    {
+      "id": 4,
+      "concept_id": 4,
+      "title": "Algebraic Expressions — Mathematics lesson",
+      "source": "YouTube",
+      "url": "https://www.youtube.com/results?search_query=Mathematics+Algebraic+Expressions+lesson+explained",
+      "description": "Concept-focused video lessons for Algebraic Expressions.",
+      "resource_type": "video"
+    },
+    {
+      "id": 5,
+      "concept_id": 20,
+      "title": "Whole Numbers & Operations — Class 5 lesson",
+      "source": "YouTube",
+      "url": "https://www.youtube.com/results?search_query=Class+5+Mathematics+Whole+Numbers+&+Operations+lesson+explained",
+      "description": "Concept-focused video lessons for Class 5 Whole Numbers & Operations.",
+      "resource_type": "video"
+    },
+    {
+      "id": 6,
+      "concept_id": 21,
+      "title": "Fractions & Decimals — Class 5 lesson",
+      "source": "YouTube",
+      "url": "https://www.youtube.com/results?search_query=Class+5+Mathematics+Fractions+&+Decimals+lesson+explained",
+      "description": "Concept-focused video lessons for Class 5 Fractions & Decimals.",
+      "resource_type": "video"
+    },
+    {
+      "id": 7,
+      "concept_id": 22,
+      "title": "Perimeter & Area — Class 5 lesson",
+      "source": "YouTube",
+      "url": "https://www.youtube.com/results?search_query=Class+5+Mathematics+Perimeter+&+Area+lesson+explained",
+      "description": "Concept-focused video lessons for Class 5 Perimeter & Area.",
+      "resource_type": "video"
+    },
+    {
+      "id": 8,
+      "concept_id": 23,
+      "title": "Integers — Class 6 lesson",
+      "source": "YouTube",
+      "url": "https://www.youtube.com/results?search_query=Class+6+Mathematics+Integers+lesson+explained",
+      "description": "Concept-focused video lessons for Class 6 Integers.",
+      "resource_type": "video"
+    },
+    {
+      "id": 9,
+      "concept_id": 24,
+      "title": "Fractions & Decimals — Class 6 lesson",
+      "source": "YouTube",
+      "url": "https://www.youtube.com/results?search_query=Class+6+Mathematics+Fractions+&+Decimals+lesson+explained",
+      "description": "Concept-focused video lessons for Class 6 Fractions & Decimals.",
+      "resource_type": "video"
+    },
+    {
+      "id": 10,
+      "concept_id": 25,
+      "title": "Ratio & Proportion — Class 6 lesson",
+      "source": "YouTube",
+      "url": "https://www.youtube.com/results?search_query=Class+6+Mathematics+Ratio+&+Proportion+lesson+explained",
+      "description": "Concept-focused video lessons for Class 6 Ratio & Proportion.",
+      "resource_type": "video"
+    },
+    {
+      "id": 11,
+      "concept_id": 26,
+      "title": "Rational Numbers — Class 7 lesson",
+      "source": "YouTube",
+      "url": "https://www.youtube.com/results?search_query=Class+7+Mathematics+Rational+Numbers+lesson+explained",
+      "description": "Concept-focused video lessons for Class 7 Rational Numbers.",
+      "resource_type": "video"
+    },
+    {
+      "id": 12,
+      "concept_id": 27,
+      "title": "Algebraic Expressions — Class 7 lesson",
+      "source": "YouTube",
+      "url": "https://www.youtube.com/results?search_query=Class+7+Mathematics+Algebraic+Expressions+lesson+explained",
+      "description": "Concept-focused video lessons for Class 7 Algebraic Expressions.",
+      "resource_type": "video"
+    },
+    {
+      "id": 13,
+      "concept_id": 28,
+      "title": "Simple Equations — Class 7 lesson",
+      "source": "YouTube",
+      "url": "https://www.youtube.com/results?search_query=Class+7+Mathematics+Simple+Equations+lesson+explained",
+      "description": "Concept-focused video lessons for Class 7 Simple Equations.",
+      "resource_type": "video"
+    },
+    {
+      "id": 14,
+      "concept_id": 29,
+      "title": "Linear Equations — Class 8 lesson",
+      "source": "YouTube",
+      "url": "https://www.youtube.com/results?search_query=Class+8+Mathematics+Linear+Equations+lesson+explained",
+      "description": "Concept-focused video lessons for Class 8 Linear Equations.",
+      "resource_type": "video"
+    },
+    {
+      "id": 15,
+      "concept_id": 30,
+      "title": "Exponents & Powers — Class 8 lesson",
+      "source": "YouTube",
+      "url": "https://www.youtube.com/results?search_query=Class+8+Mathematics+Exponents+&+Powers+lesson+explained",
+      "description": "Concept-focused video lessons for Class 8 Exponents & Powers.",
+      "resource_type": "video"
+    },
+    {
+      "id": 16,
+      "concept_id": 31,
+      "title": "Comparing Quantities — Class 8 lesson",
+      "source": "YouTube",
+      "url": "https://www.youtube.com/results?search_query=Class+8+Mathematics+Comparing+Quantities+lesson+explained",
+      "description": "Concept-focused video lessons for Class 8 Comparing Quantities.",
+      "resource_type": "video"
+    },
+    {
+      "id": 17,
+      "concept_id": 32,
+      "title": "Number Systems — Class 9 lesson",
+      "source": "YouTube",
+      "url": "https://www.youtube.com/results?search_query=Class+9+Mathematics+Number+Systems+lesson+explained",
+      "description": "Concept-focused video lessons for Class 9 Number Systems.",
+      "resource_type": "video"
+    },
+    {
+      "id": 18,
+      "concept_id": 33,
+      "title": "Polynomials — Class 9 lesson",
+      "source": "YouTube",
+      "url": "https://www.youtube.com/results?search_query=Class+9+Mathematics+Polynomials+lesson+explained",
+      "description": "Concept-focused video lessons for Class 9 Polynomials.",
+      "resource_type": "video"
+    },
+    {
+      "id": 19,
+      "concept_id": 34,
+      "title": "Coordinate Geometry — Class 9 lesson",
+      "source": "YouTube",
+      "url": "https://www.youtube.com/results?search_query=Class+9+Mathematics+Coordinate+Geometry+lesson+explained",
+      "description": "Concept-focused video lessons for Class 9 Coordinate Geometry.",
+      "resource_type": "video"
+    }
+  ],
+  "recommendations": [
+    {
+      "id": 1,
+      "student_id": 101,
+      "concept_id": 1,
+      "resource_id": 1,
+      "reason": "Recommended because this concept is part of the learner's current curriculum or needs focused practice.",
+      "status": "active",
+      "created_at": "2026-09-26T00:00:00"
+    },
+    {
+      "id": 2,
+      "student_id": 101,
+      "concept_id": 2,
+      "resource_id": 2,
+      "reason": "Recommended because this concept is part of the learner's current curriculum or needs focused practice.",
+      "status": "active",
+      "created_at": "2026-09-26T00:00:00"
+    },
+    {
+      "id": 3,
+      "student_id": 101,
+      "concept_id": 3,
+      "resource_id": 3,
+      "reason": "Recommended because this concept is part of the learner's current curriculum or needs focused practice.",
+      "status": "active",
+      "created_at": "2026-09-26T00:00:00"
+    },
+    {
+      "id": 4,
+      "student_id": 101,
+      "concept_id": 4,
+      "resource_id": 4,
+      "reason": "Recommended because this concept is part of the learner's current curriculum or needs focused practice.",
+      "status": "active",
+      "created_at": "2026-09-26T00:00:00"
+    },
+    {
+      "id": 5,
+      "student_id": 101,
+      "concept_id": 20,
+      "resource_id": 5,
+      "reason": "Recommended because this concept is part of the learner's current curriculum or needs focused practice.",
+      "status": "active",
+      "created_at": "2026-09-26T00:00:00"
+    },
+    {
+      "id": 6,
+      "student_id": 101,
+      "concept_id": 21,
+      "resource_id": 6,
+      "reason": "Recommended because this concept is part of the learner's current curriculum or needs focused practice.",
+      "status": "active",
+      "created_at": "2026-09-26T00:00:00"
+    },
+    {
+      "id": 7,
+      "student_id": 101,
+      "concept_id": 22,
+      "resource_id": 7,
+      "reason": "Recommended because this concept is part of the learner's current curriculum or needs focused practice.",
+      "status": "active",
+      "created_at": "2026-09-26T00:00:00"
+    },
+    {
+      "id": 8,
+      "student_id": 101,
+      "concept_id": 23,
+      "resource_id": 8,
+      "reason": "Recommended because this concept is part of the learner's current curriculum or needs focused practice.",
+      "status": "active",
+      "created_at": "2026-09-26T00:00:00"
+    },
+    {
+      "id": 9,
+      "student_id": 101,
+      "concept_id": 24,
+      "resource_id": 9,
+      "reason": "Recommended because this concept is part of the learner's current curriculum or needs focused practice.",
+      "status": "active",
+      "created_at": "2026-09-26T00:00:00"
+    },
+    {
+      "id": 10,
+      "student_id": 101,
+      "concept_id": 25,
+      "resource_id": 10,
+      "reason": "Recommended because this concept is part of the learner's current curriculum or needs focused practice.",
+      "status": "active",
+      "created_at": "2026-09-26T00:00:00"
+    },
+    {
+      "id": 11,
+      "student_id": 101,
+      "concept_id": 26,
+      "resource_id": 11,
+      "reason": "Recommended because this concept is part of the learner's current curriculum or needs focused practice.",
+      "status": "active",
+      "created_at": "2026-09-26T00:00:00"
+    },
+    {
+      "id": 12,
+      "student_id": 101,
+      "concept_id": 27,
+      "resource_id": 12,
+      "reason": "Recommended because this concept is part of the learner's current curriculum or needs focused practice.",
+      "status": "active",
+      "created_at": "2026-09-26T00:00:00"
+    },
+    {
+      "id": 13,
+      "student_id": 101,
+      "concept_id": 28,
+      "resource_id": 13,
+      "reason": "Recommended because this concept is part of the learner's current curriculum or needs focused practice.",
+      "status": "active",
+      "created_at": "2026-09-26T00:00:00"
+    },
+    {
+      "id": 14,
+      "student_id": 101,
+      "concept_id": 29,
+      "resource_id": 14,
+      "reason": "Recommended because this concept is part of the learner's current curriculum or needs focused practice.",
+      "status": "active",
+      "created_at": "2026-09-26T00:00:00"
+    },
+    {
+      "id": 15,
+      "student_id": 101,
+      "concept_id": 30,
+      "resource_id": 15,
+      "reason": "Recommended because this concept is part of the learner's current curriculum or needs focused practice.",
+      "status": "active",
+      "created_at": "2026-09-26T00:00:00"
+    },
+    {
+      "id": 16,
+      "student_id": 101,
+      "concept_id": 31,
+      "resource_id": 16,
+      "reason": "Recommended because this concept is part of the learner's current curriculum or needs focused practice.",
+      "status": "active",
+      "created_at": "2026-09-26T00:00:00"
+    },
+    {
+      "id": 17,
+      "student_id": 101,
+      "concept_id": 32,
+      "resource_id": 17,
+      "reason": "Recommended because this concept is part of the learner's current curriculum or needs focused practice.",
+      "status": "active",
+      "created_at": "2026-09-26T00:00:00"
+    },
+    {
+      "id": 18,
+      "student_id": 101,
+      "concept_id": 33,
+      "resource_id": 18,
+      "reason": "Recommended because this concept is part of the learner's current curriculum or needs focused practice.",
+      "status": "active",
+      "created_at": "2026-09-26T00:00:00"
+    },
+    {
+      "id": 19,
+      "student_id": 101,
+      "concept_id": 34,
+      "resource_id": 19,
+      "reason": "Recommended because this concept is part of the learner's current curriculum or needs focused practice.",
+      "status": "active",
+      "created_at": "2026-09-26T00:00:00"
+    }
+  ]
+}
