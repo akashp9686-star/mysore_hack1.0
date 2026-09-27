@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Problems</title>
+    <link rel="stylesheet" href="./chess-problems.css">
+</head>
+
+<body>
+
+<div class="chess-problems-page">
+    <div class="container">
+
+        <header class="page-header">
+            <div>
+                <div class="page-title">♟ Chess Learning</div>
+                <div class="page-subtitle">Chess Problems</div>
+            </div>
+            <a href="../../index.html" class="back-button">← Back</a>
+        </header>
+
+        <main>
+            <!-- HEADER (Title & Difficulty) -->
+            <section class="problem-header" style="margin-bottom: 30px;">
+                <div id="problemCounter" style="color: #37d9ff; font-weight: bold; font-size: 13px; letter-spacing: 1px; margin-bottom: 12px; display: inline-block; padding: 4px 10px; background: rgba(55, 217, 255, 0.1); border-radius: 4px;">
+                    Loading...
+                </div>
+                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 8px;">
+                    <h1 id="problemTitle" style="font-size: 36px;">Loading problem...</h1>
+                    <div id="difficulty" class="difficulty hidden">BEGINNER</div>
+                </div>
+                <p id="problemDescription" style="color: #8d98a6;">Loading...</p>
+            </section>
+
+
+            <!-- MAIN GRID LAYOUT -->
+            <div class="problem-layout">
+                
+                <!-- LEFT: CHESS BOARD -->
+                <section class="board-section">
+                    <div class="board-wrapper">
+                        <div id="chessBoard" class="chess-board"></div>
+                    </div>
+                </section>
+
+
+                <!-- RIGHT: PROBLEM PANEL -->
+                <aside class="problem-panel">
+
+                    <!-- NEW: SESSION STATS -->
+                    <div class="session-stats">
+                        <div class="stat-box">
+                            <span class="stat-label">Accuracy</span>
+                            <div id="statAccuracy" class="stat-value" style="color: #37d9ff;">0%</div>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-label">1st Try</span>
+                            <div id="statCorrect" class="stat-value" style="color: #4ade80;">0</div>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-label">Attempted</span>
+                            <div id="statAttempted" class="stat-value" style="color: #ffffff;">0</div>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-label">Streak🔥</span>
+                            <div id="statStreak" class="stat-value" style="color: #fbbf24;">0</div>
+                        </div>
+                    </div>
+
+                    <div class="panel-section">
+                        <span class="move-label" style="display:block; margin-bottom: 6px; font-weight: bold; color: #37d9ff;">YOUR TASK</span>
+                        <h2 id="taskTitle" style="font-size: 24px; margin-bottom: 12px;">White to move</h2>
+                        <p id="taskDescription" class="problem-description">Select the piece you want to move, then select its destination square.</p>
+                    </div>
+
+                    <hr style="border: 0; border-top: 1px solid #1f2937; margin: 25px 0;">
+
+                    <div class="selected-move-section">
+                        <span class="move-label" style="display:block; margin-bottom: 10px; font-weight: bold; color: #37d9ff;">SELECTED MOVE</span>
+                        <div class="move-info">
+                            <div id="selectedMove" class="selected-move">No move selected</div>
+                        </div>
+                    </div>
+
+                    <div id="feedback" class="feedback hidden"></div>
+
+                    <div class="button-row">
+                        <button id="submitButton" class="primary-button" style="flex: 1;">Submit Move</button>
+                        <button id="nextButton" class="primary-button hidden" style="flex: 1; background: #4ade80; color: #06090e;">Next Problem</button>
+                        <button id="resetButton" class="secondary-button">Reset</button>
+                    </div>
+
+                    <div id="explanation" class="explanation hidden">
+                        <span class="move-label" style="display:block; margin-bottom: 6px; font-weight: bold;">EXPLANATION</span>
+                        <p id="explanationText"></p>
+                    </div>
+
+                </aside>
+            </div>
+
+            <!-- LEARNING TIP -->
+            <section class="learning-tip" style="margin-top: 30px; max-width: 620px;">
+                <div style="display: flex; gap: 12px;">
+                    <span class="tip-icon" style="font-size: 20px;">💡</span>
+                    <div>
+                        <h3 style="margin-bottom: 4px;">Think before you move</h3>
+                        <p id="learningTip">Look for checks, captures and threats before choosing your move.</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+</div>
+
+<script type="module" src="./chess-problems.js"></script>
+
+</body>
+</html>

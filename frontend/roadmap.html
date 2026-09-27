@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Learning Roadmap</title>
+<link rel="stylesheet" href="./css/site.css">
+</head>
+<body>
+<div class="app-shell">
+<header class="site-header">
+  <a class="brand" href="./general.html"><span class="brand-mark">◆</span><span><strong>Personalized Learning</strong><small>Learning Roadmap</small></span></a>
+  <nav><a class="nav-link" href="./profile.html">Learning</a><a class="nav-link active" href="./general.html">General Concepts</a></nav>
+  <div class="coin-pill">🪙 <span id="coinBalance">10</span> coins</div>
+</header>
+<main class="container roadmap-page">
+  <div class="activity-top"><a href="./general.html" class="back-button">← Back</a><div class="grade-picker"><label>Grade</label><select id="gradeSelect"><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select></div></div>
+  <section class="hero compact"><span class="eyebrow" id="roadmapEyebrow">LEARNING ROADMAP</span><h1 id="roadmapTitle">Your level road map.</h1><p>Start here to see exactly where you stopped. Choose a specific unlocked level to open its activity.</p></section>
+  <section class="continue-card">
+    <div><span class="section-label">YOUR NEXT STEP</span><h2 id="continueText">Continue from your saved level</h2><p>Your completed levels stay saved in this browser.</p></div>
+    <a id="continueLevel" class="start-button" href="#">Continue →</a>
+  </section>
+  <section class="roadmap-card">
+    <div class="roadmap-head"><div><span class="section-label">LEVEL ROADMAP</span><h2 id="progressTitle">Loading...</h2></div><span class="level-chip" id="progressChip">0 / 20</span></div>
+    <div class="roadmap-progress"><div id="roadmapFill"></div></div>
+    <div id="levels" class="level-road"></div>
+  </section>
+</main>
+</div>
+<script src="./js/roadmap.js"></script>
+</body>
+</html>

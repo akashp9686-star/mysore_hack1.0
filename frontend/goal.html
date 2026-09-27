@@ -1,8 +1,62 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Select your goal</title><link rel="stylesheet" href="css/style.css"><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="supabase-config.js"></script><script src="js/auth.js"></script></head><body><header class="topbar"><div class="container topbar-inner"><a class="brand" href="index.html"><span class="brand-mark">P</span><span>Personalized Learning</span></a></div></header><main class="page"><div class="container"><div class="page-head"><div><div class="eyebrow">Step 02 · Goal</div><h1>What do you want to learn?</h1><p>Choose a learning area. Mathematics and General concepts have separate learning spaces.</p></div></div><div id="goals" class="choice-grid"></div><div class="hero-actions"><button id="continue" class="btn btn-primary" disabled>Continue</button></div></div></main><script>
-const items=[
- {id:'Mathematics',title:'Mathematics',desc:'Class-specific mathematics curriculum for Classes 5–9.',mini:'Each class has its own topics, basic video lessons, MCQs and progress-based question selection.'},
- {id:'General concepts',title:'General Concepts',desc:'Broader learning areas beyond mathematics.',mini:'Communication Skills · Spell Talk · Chess Learning · Brainstorm — content space ready for later.'}
-];
-const p=Auth.getDemoProfile()||{};let chosen=null;const wrap=document.getElementById('goals');items.forEach(x=>{const b=document.createElement('button');b.className='choice';b.innerHTML=`<h3>${x.title}</h3><p>${x.desc}</p><div class="mini">${x.mini}</div>`;b.onclick=()=>{document.querySelectorAll('.choice').forEach(y=>y.classList.remove('selected'));b.classList.add('selected');chosen=x.id;document.getElementById('continue').disabled=false};wrap.appendChild(b)});
-document.getElementById('continue').onclick=()=>{Auth.saveProfile({...p,path:'school',goal:chosen});location.href='profile.html'};
-</script><script src="js/api.js"></script><script src="js/ai-assistant.js"></script></body></html>
+const profile=Auth.getDemoProfile()||{};
+const wrap=document.getElementById('goals');
+const continueBtn=document.getElementById('continue');
+let chosen=null;
+
+function createCard(item, kind='subject'){
+  const b=document.createElement('button');
+  b.className='choice';
+  b.innerHTML=`<h3>${escText(item.title)}</h3><p>${escText(item.desc)}</p><div class="mini">${escText(item.mini)}</div>`;
+  b.onclick=()=>{
+    document.querySelectorAll('.choice').forEach(y=>y.classList.remove('selected'));
+    b.classList.add('selected');
+    chosen={id:item.id,title:item.title,kind};
+    continueBtn.disabled=false;
+  };
+  wrap.appendChild(b);
+}
+function escText(value){return String(value??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));}
+
+async function loadSubjects(){
+  wrap.innerHTML='<div class="loading"><div class="spinner"></div><div>Loading subjects…</div></div>';
+  try{
+    const response=await fetch('/api/subjects');
+    if(!response.ok) throw new Error('Could not load subjects.');
+    const data=await response.json();
+    wrap.innerHTML='';
+    // Keep only the currently supported academic learning area visible here.
+    (data.subjects||[]).filter(subject=>subject.name==='Mathematics').forEach(subject=>createCard({
+      id:subject.id,
+      title:subject.name,
+      desc:'Class-specific mathematics curriculum for Classes 5–9.',
+      mini:'Each class has its own topics, basic video lessons, MCQs and progress-based question selection.'
+    }));
+
+    // General Concepts is intentionally separate from academic subjects. It
+    // remains the existing non-academic placeholder area, unchanged.
+    createCard({
+      id:'general-concepts',
+      title:'General Concepts',
+      desc:'Broader learning areas beyond academic subjects.',
+      mini:'Communication Skills · Spell Talk · Brainstorm — content space ready for later.'
+    }, 'general');
+  }catch(error){
+    wrap.innerHTML=`<div class="alert alert-danger"><strong>Couldn't load subjects.</strong><div style="margin-top:5px">${escText(error.message)}</div></div>`;
+  }
+}
+
+continueBtn.onclick=()=>{
+  if(!chosen)return;
+  if(chosen.kind==='general'){
+    Auth.saveProfile({...profile,path:'school',goal:'General concepts'});
+    location.href='profile.html';
+    return;
+  }
+  Auth.saveProfile({...profile,path:'school',goal:chosen.title,subject_id:chosen.id});
+  if(chosen.title==='Mathematics') location.href='profile.html';
+  else location.href=`subject-unavailable.html?subject=${encodeURIComponent(chosen.title)}`;
+};
+
+loadSubjects();
+</script></script><script src="js/api.js"></script><script src="js/ai-assistant.js"></script></body></html>

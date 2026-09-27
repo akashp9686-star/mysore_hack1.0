@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Learning Activity</title>
+<link rel="stylesheet" href="./css/site.css">
+</head>
+<body>
+<div class="app-shell">
+<header class="site-header">
+  <a class="brand" href="./general.html"><span class="brand-mark">◆</span><span><strong>Personalized Learning</strong><small>General Concepts</small></span></a>
+  <nav><a class="nav-link" href="./profile.html">Learning</a><a class="nav-link active" href="./general.html">General Concepts</a></nav>
+  <div class="coin-pill">🪙 <span id="coinBalance">10</span> coins</div>
+</header>
+<main class="container activity-page">
+  <div class="activity-top"><a id="roadBack" href="./general.html" class="back-button">← Back to Roadmap</a><div class="grade-picker"><label>Grade</label><select id="gradeSelect"><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option></select></div></div>
+  <section class="activity-card">
+    <div class="activity-meta"><span class="section-label" id="activityCounter">ACTIVITY</span><span class="status active-status">ACTIVE</span></div>
+    <div class="level-heading"><div><span class="mini-label">CURRENT LEVEL</span><h2 id="levelTitle">Loading...</h2></div><span id="levelSub" class="level-chip">Level 1 of 20</span></div>
+    <h1 id="activityTitle">Loading...</h1>
+    <p class="activity-theme" id="activityTheme"></p>
+    <div class="difficulty-strip"><span>GRADE <b id="gradeLabel">5</b></span><span>MEDIUM CHALLENGE</span><span id="stageLabel">SKILL BUILDING</span></div>
+    <div class="prompt-box top-prompt"><span class="mini-label">YOUR TASK</span><p id="activityPrompt"></p></div>
+    <div class="attempt-bar"><span>ATTEMPTS</span><strong id="attemptCount">0 / 3 attempts used</strong><div class="attempt-pips"><i class="attempt-pip"></i><i class="attempt-pip"></i><i class="attempt-pip"></i></div><span class="attempt-note" id="attemptNote">First try earns the full coin reward.</span></div>
+    <div id="activityBody"></div>
+    <div class="activity-actions"><button id="submitButton" class="primary-button">Submit</button><button id="resetButton" class="secondary-button">Reset</button></div>
+    <div id="feedback" class="feedback hidden"></div>
+    <div id="completion" class="completion hidden"><div><span class="coin-reward">🪙 +<span id="coinsAwarded">0</span> coins</span><h2>Level complete!</h2><p id="progressFeedback"></p></div><div class="completion-actions"><button class="secondary-button" id="reviewButton">Review</button><button class="primary-button" id="continueButton">Continue →</button></div></div>
+    <div id="failureBox" class="failure-box hidden"></div>
+  </section>
+</main>
+</div>
+<script src="./js/activity.js"></script>
+</body>
+</html>

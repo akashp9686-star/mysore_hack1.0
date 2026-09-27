@@ -1,0 +1,1202 @@
+[
+  {
+    "id": "chess_beginner_01",
+    "title": "Beginner Level 1: Find the Checkmate",
+    "difficulty": "Beginner",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "Board coordinates \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Beginner",
+    "stage_level": 1,
+    "global_level": 1,
+    "stage_focus": "Board coordinates"
+  },
+  {
+    "id": "chess_beginner_02",
+    "title": "Beginner Level 2: Back-Rank Mate",
+    "difficulty": "Beginner",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Piece movement \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Beginner",
+    "stage_level": 2,
+    "global_level": 2,
+    "stage_focus": "Piece movement"
+  },
+  {
+    "id": "chess_beginner_03",
+    "title": "Beginner Level 3: Find the Checkmate",
+    "difficulty": "Beginner",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "Captures \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Beginner",
+    "stage_level": 3,
+    "global_level": 3,
+    "stage_focus": "Captures"
+  },
+  {
+    "id": "chess_beginner_04",
+    "title": "Beginner Level 4: Back-Rank Mate",
+    "difficulty": "Beginner",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Checks \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Beginner",
+    "stage_level": 4,
+    "global_level": 4,
+    "stage_focus": "Checks"
+  },
+  {
+    "id": "chess_beginner_05",
+    "title": "Beginner Level 5: Find the Checkmate",
+    "difficulty": "Beginner",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "King safety \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Beginner",
+    "stage_level": 5,
+    "global_level": 5,
+    "stage_focus": "King safety"
+  },
+  {
+    "id": "chess_beginner_06",
+    "title": "Beginner Level 6: Back-Rank Mate",
+    "difficulty": "Beginner",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Mate in one \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Beginner",
+    "stage_level": 6,
+    "global_level": 6,
+    "stage_focus": "Mate in one"
+  },
+  {
+    "id": "chess_beginner_07",
+    "title": "Beginner Level 7: Find the Checkmate",
+    "difficulty": "Beginner",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "Back rank \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Beginner",
+    "stage_level": 7,
+    "global_level": 7,
+    "stage_focus": "Back rank"
+  },
+  {
+    "id": "chess_beginner_08",
+    "title": "Beginner Level 8: Back-Rank Mate",
+    "difficulty": "Beginner",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Protected pieces \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Beginner",
+    "stage_level": 8,
+    "global_level": 8,
+    "stage_focus": "Protected pieces"
+  },
+  {
+    "id": "chess_beginner_09",
+    "title": "Beginner Level 9: Find the Checkmate",
+    "difficulty": "Beginner",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "Forcing moves \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Beginner",
+    "stage_level": 9,
+    "global_level": 9,
+    "stage_focus": "Forcing moves"
+  },
+  {
+    "id": "chess_beginner_10",
+    "title": "Beginner Level 10: Back-Rank Mate",
+    "difficulty": "Beginner",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Checks first \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Beginner",
+    "stage_level": 10,
+    "global_level": 10,
+    "stage_focus": "Checks first"
+  },
+  {
+    "id": "chess_beginner_11",
+    "title": "Beginner Level 11: Find the Checkmate",
+    "difficulty": "Beginner",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "Board coordinates \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Beginner",
+    "stage_level": 11,
+    "global_level": 11,
+    "stage_focus": "Board coordinates"
+  },
+  {
+    "id": "chess_beginner_12",
+    "title": "Beginner Level 12: Back-Rank Mate",
+    "difficulty": "Beginner",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Piece movement \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Beginner",
+    "stage_level": 12,
+    "global_level": 12,
+    "stage_focus": "Piece movement"
+  },
+  {
+    "id": "chess_beginner_13",
+    "title": "Beginner Level 13: Find the Checkmate",
+    "difficulty": "Beginner",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "Captures \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Beginner",
+    "stage_level": 13,
+    "global_level": 13,
+    "stage_focus": "Captures"
+  },
+  {
+    "id": "chess_beginner_14",
+    "title": "Beginner Level 14: Back-Rank Mate",
+    "difficulty": "Beginner",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Checks \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Beginner",
+    "stage_level": 14,
+    "global_level": 14,
+    "stage_focus": "Checks"
+  },
+  {
+    "id": "chess_beginner_15",
+    "title": "Beginner Level 15: Find the Checkmate",
+    "difficulty": "Beginner",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "King safety \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Beginner",
+    "stage_level": 15,
+    "global_level": 15,
+    "stage_focus": "King safety"
+  },
+  {
+    "id": "chess_beginner_16",
+    "title": "Beginner Level 16: Back-Rank Mate",
+    "difficulty": "Beginner",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Mate in one \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Beginner",
+    "stage_level": 16,
+    "global_level": 16,
+    "stage_focus": "Mate in one"
+  },
+  {
+    "id": "chess_beginner_17",
+    "title": "Beginner Level 17: Find the Checkmate",
+    "difficulty": "Beginner",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "Back rank \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Beginner",
+    "stage_level": 17,
+    "global_level": 17,
+    "stage_focus": "Back rank"
+  },
+  {
+    "id": "chess_beginner_18",
+    "title": "Beginner Level 18: Back-Rank Mate",
+    "difficulty": "Beginner",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Protected pieces \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Beginner",
+    "stage_level": 18,
+    "global_level": 18,
+    "stage_focus": "Protected pieces"
+  },
+  {
+    "id": "chess_beginner_19",
+    "title": "Beginner Level 19: Find the Checkmate",
+    "difficulty": "Beginner",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "Forcing moves \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Beginner",
+    "stage_level": 19,
+    "global_level": 19,
+    "stage_focus": "Forcing moves"
+  },
+  {
+    "id": "chess_beginner_20",
+    "title": "Beginner Level 20: Back-Rank Mate",
+    "difficulty": "Beginner",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Checks first \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Beginner",
+    "stage_level": 20,
+    "global_level": 20,
+    "stage_focus": "Checks first"
+  },
+  {
+    "id": "chess_beginner_21",
+    "title": "Beginner Level 21: Find the Checkmate",
+    "difficulty": "Beginner",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "Board coordinates \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Beginner",
+    "stage_level": 21,
+    "global_level": 21,
+    "stage_focus": "Board coordinates"
+  },
+  {
+    "id": "chess_beginner_22",
+    "title": "Beginner Level 22: Back-Rank Mate",
+    "difficulty": "Beginner",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Piece movement \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Beginner",
+    "stage_level": 22,
+    "global_level": 22,
+    "stage_focus": "Piece movement"
+  },
+  {
+    "id": "chess_beginner_23",
+    "title": "Beginner Level 23: Find the Checkmate",
+    "difficulty": "Beginner",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "Captures \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Beginner",
+    "stage_level": 23,
+    "global_level": 23,
+    "stage_focus": "Captures"
+  },
+  {
+    "id": "chess_beginner_24",
+    "title": "Beginner Level 24: Back-Rank Mate",
+    "difficulty": "Beginner",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Checks \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Beginner",
+    "stage_level": 24,
+    "global_level": 24,
+    "stage_focus": "Checks"
+  },
+  {
+    "id": "chess_beginner_25",
+    "title": "Beginner Level 25: Find the Checkmate",
+    "difficulty": "Beginner",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "King safety \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Beginner",
+    "stage_level": 25,
+    "global_level": 25,
+    "stage_focus": "King safety"
+  },
+  {
+    "id": "chess_intermediate_01",
+    "title": "Intermediate Level 1: Find the Checkmate",
+    "difficulty": "Intermediate",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "Candidate moves \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Intermediate",
+    "stage_level": 1,
+    "global_level": 26,
+    "stage_focus": "Candidate moves"
+  },
+  {
+    "id": "chess_intermediate_02",
+    "title": "Intermediate Level 2: Back-Rank Mate",
+    "difficulty": "Intermediate",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Double attacks \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Intermediate",
+    "stage_level": 2,
+    "global_level": 27,
+    "stage_focus": "Double attacks"
+  },
+  {
+    "id": "chess_intermediate_03",
+    "title": "Intermediate Level 3: Find the Checkmate",
+    "difficulty": "Intermediate",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "Pinned pieces \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Intermediate",
+    "stage_level": 3,
+    "global_level": 28,
+    "stage_focus": "Pinned pieces"
+  },
+  {
+    "id": "chess_intermediate_04",
+    "title": "Intermediate Level 4: Back-Rank Mate",
+    "difficulty": "Intermediate",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Deflection \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Intermediate",
+    "stage_level": 4,
+    "global_level": 29,
+    "stage_focus": "Deflection"
+  },
+  {
+    "id": "chess_intermediate_05",
+    "title": "Intermediate Level 5: Find the Checkmate",
+    "difficulty": "Intermediate",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "Discovered attacks \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Intermediate",
+    "stage_level": 5,
+    "global_level": 30,
+    "stage_focus": "Discovered attacks"
+  },
+  {
+    "id": "chess_intermediate_06",
+    "title": "Intermediate Level 6: Back-Rank Mate",
+    "difficulty": "Intermediate",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Back-rank patterns \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Intermediate",
+    "stage_level": 6,
+    "global_level": 31,
+    "stage_focus": "Back-rank patterns"
+  },
+  {
+    "id": "chess_intermediate_07",
+    "title": "Intermediate Level 7: Find the Checkmate",
+    "difficulty": "Intermediate",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "King exposure \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Intermediate",
+    "stage_level": 7,
+    "global_level": 32,
+    "stage_focus": "King exposure"
+  },
+  {
+    "id": "chess_intermediate_08",
+    "title": "Intermediate Level 8: Back-Rank Mate",
+    "difficulty": "Intermediate",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Calculation \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Intermediate",
+    "stage_level": 8,
+    "global_level": 33,
+    "stage_focus": "Calculation"
+  },
+  {
+    "id": "chess_intermediate_09",
+    "title": "Intermediate Level 9: Find the Checkmate",
+    "difficulty": "Intermediate",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "Forcing sequence \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Intermediate",
+    "stage_level": 9,
+    "global_level": 34,
+    "stage_focus": "Forcing sequence"
+  },
+  {
+    "id": "chess_intermediate_10",
+    "title": "Intermediate Level 10: Back-Rank Mate",
+    "difficulty": "Intermediate",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Tactical discipline \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Intermediate",
+    "stage_level": 10,
+    "global_level": 35,
+    "stage_focus": "Tactical discipline"
+  },
+  {
+    "id": "chess_intermediate_11",
+    "title": "Intermediate Level 11: Find the Checkmate",
+    "difficulty": "Intermediate",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "Candidate moves \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Intermediate",
+    "stage_level": 11,
+    "global_level": 36,
+    "stage_focus": "Candidate moves"
+  },
+  {
+    "id": "chess_intermediate_12",
+    "title": "Intermediate Level 12: Back-Rank Mate",
+    "difficulty": "Intermediate",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Double attacks \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Intermediate",
+    "stage_level": 12,
+    "global_level": 37,
+    "stage_focus": "Double attacks"
+  },
+  {
+    "id": "chess_intermediate_13",
+    "title": "Intermediate Level 13: Find the Checkmate",
+    "difficulty": "Intermediate",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "Pinned pieces \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Intermediate",
+    "stage_level": 13,
+    "global_level": 38,
+    "stage_focus": "Pinned pieces"
+  },
+  {
+    "id": "chess_intermediate_14",
+    "title": "Intermediate Level 14: Back-Rank Mate",
+    "difficulty": "Intermediate",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Deflection \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Intermediate",
+    "stage_level": 14,
+    "global_level": 39,
+    "stage_focus": "Deflection"
+  },
+  {
+    "id": "chess_intermediate_15",
+    "title": "Intermediate Level 15: Find the Checkmate",
+    "difficulty": "Intermediate",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "Discovered attacks \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Intermediate",
+    "stage_level": 15,
+    "global_level": 40,
+    "stage_focus": "Discovered attacks"
+  },
+  {
+    "id": "chess_intermediate_16",
+    "title": "Intermediate Level 16: Back-Rank Mate",
+    "difficulty": "Intermediate",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Back-rank patterns \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Intermediate",
+    "stage_level": 16,
+    "global_level": 41,
+    "stage_focus": "Back-rank patterns"
+  },
+  {
+    "id": "chess_intermediate_17",
+    "title": "Intermediate Level 17: Find the Checkmate",
+    "difficulty": "Intermediate",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "King exposure \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Intermediate",
+    "stage_level": 17,
+    "global_level": 42,
+    "stage_focus": "King exposure"
+  },
+  {
+    "id": "chess_intermediate_18",
+    "title": "Intermediate Level 18: Back-Rank Mate",
+    "difficulty": "Intermediate",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Calculation \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Intermediate",
+    "stage_level": 18,
+    "global_level": 43,
+    "stage_focus": "Calculation"
+  },
+  {
+    "id": "chess_intermediate_19",
+    "title": "Intermediate Level 19: Find the Checkmate",
+    "difficulty": "Intermediate",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "Forcing sequence \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Intermediate",
+    "stage_level": 19,
+    "global_level": 44,
+    "stage_focus": "Forcing sequence"
+  },
+  {
+    "id": "chess_intermediate_20",
+    "title": "Intermediate Level 20: Back-Rank Mate",
+    "difficulty": "Intermediate",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Tactical discipline \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Intermediate",
+    "stage_level": 20,
+    "global_level": 45,
+    "stage_focus": "Tactical discipline"
+  },
+  {
+    "id": "chess_intermediate_21",
+    "title": "Intermediate Level 21: Find the Checkmate",
+    "difficulty": "Intermediate",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "Candidate moves \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Intermediate",
+    "stage_level": 21,
+    "global_level": 46,
+    "stage_focus": "Candidate moves"
+  },
+  {
+    "id": "chess_intermediate_22",
+    "title": "Intermediate Level 22: Back-Rank Mate",
+    "difficulty": "Intermediate",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Double attacks \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Intermediate",
+    "stage_level": 22,
+    "global_level": 47,
+    "stage_focus": "Double attacks"
+  },
+  {
+    "id": "chess_intermediate_23",
+    "title": "Intermediate Level 23: Find the Checkmate",
+    "difficulty": "Intermediate",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "Pinned pieces \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Intermediate",
+    "stage_level": 23,
+    "global_level": 48,
+    "stage_focus": "Pinned pieces"
+  },
+  {
+    "id": "chess_intermediate_24",
+    "title": "Intermediate Level 24: Back-Rank Mate",
+    "difficulty": "Intermediate",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Deflection \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Intermediate",
+    "stage_level": 24,
+    "global_level": 49,
+    "stage_focus": "Deflection"
+  },
+  {
+    "id": "chess_intermediate_25",
+    "title": "Intermediate Level 25: Find the Checkmate",
+    "difficulty": "Intermediate",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "Discovered attacks \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Intermediate",
+    "stage_level": 25,
+    "global_level": 50,
+    "stage_focus": "Discovered attacks"
+  },
+  {
+    "id": "chess_advanced_01",
+    "title": "Advanced Level 1: Find the Checkmate",
+    "difficulty": "Advanced",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "Calculate before moving \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Advanced",
+    "stage_level": 1,
+    "global_level": 51,
+    "stage_focus": "Calculate before moving"
+  },
+  {
+    "id": "chess_advanced_02",
+    "title": "Advanced Level 2: Back-Rank Mate",
+    "difficulty": "Advanced",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Move ordering \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Advanced",
+    "stage_level": 2,
+    "global_level": 52,
+    "stage_focus": "Move ordering"
+  },
+  {
+    "id": "chess_advanced_03",
+    "title": "Advanced Level 3: Find the Checkmate",
+    "difficulty": "Advanced",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "King-net construction \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Advanced",
+    "stage_level": 3,
+    "global_level": 53,
+    "stage_focus": "King-net construction"
+  },
+  {
+    "id": "chess_advanced_04",
+    "title": "Advanced Level 4: Back-Rank Mate",
+    "difficulty": "Advanced",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Defensive resources \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Advanced",
+    "stage_level": 4,
+    "global_level": 54,
+    "stage_focus": "Defensive resources"
+  },
+  {
+    "id": "chess_advanced_05",
+    "title": "Advanced Level 5: Find the Checkmate",
+    "difficulty": "Advanced",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "Quiet move awareness \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Advanced",
+    "stage_level": 5,
+    "global_level": 55,
+    "stage_focus": "Quiet move awareness"
+  },
+  {
+    "id": "chess_advanced_06",
+    "title": "Advanced Level 6: Back-Rank Mate",
+    "difficulty": "Advanced",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Conversion technique \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Advanced",
+    "stage_level": 6,
+    "global_level": 56,
+    "stage_focus": "Conversion technique"
+  },
+  {
+    "id": "chess_advanced_07",
+    "title": "Advanced Level 7: Find the Checkmate",
+    "difficulty": "Advanced",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "Pattern recognition \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Advanced",
+    "stage_level": 7,
+    "global_level": 57,
+    "stage_focus": "Pattern recognition"
+  },
+  {
+    "id": "chess_advanced_08",
+    "title": "Advanced Level 8: Back-Rank Mate",
+    "difficulty": "Advanced",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Forcing lines \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Advanced",
+    "stage_level": 8,
+    "global_level": 58,
+    "stage_focus": "Forcing lines"
+  },
+  {
+    "id": "chess_advanced_09",
+    "title": "Advanced Level 9: Find the Checkmate",
+    "difficulty": "Advanced",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "Verification \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Advanced",
+    "stage_level": 9,
+    "global_level": 59,
+    "stage_focus": "Verification"
+  },
+  {
+    "id": "chess_advanced_10",
+    "title": "Advanced Level 10: Back-Rank Mate",
+    "difficulty": "Advanced",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Finish accurately \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Advanced",
+    "stage_level": 10,
+    "global_level": 60,
+    "stage_focus": "Finish accurately"
+  },
+  {
+    "id": "chess_advanced_11",
+    "title": "Advanced Level 11: Find the Checkmate",
+    "difficulty": "Advanced",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "Calculate before moving \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Advanced",
+    "stage_level": 11,
+    "global_level": 61,
+    "stage_focus": "Calculate before moving"
+  },
+  {
+    "id": "chess_advanced_12",
+    "title": "Advanced Level 12: Back-Rank Mate",
+    "difficulty": "Advanced",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Move ordering \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Advanced",
+    "stage_level": 12,
+    "global_level": 62,
+    "stage_focus": "Move ordering"
+  },
+  {
+    "id": "chess_advanced_13",
+    "title": "Advanced Level 13: Find the Checkmate",
+    "difficulty": "Advanced",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "King-net construction \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Advanced",
+    "stage_level": 13,
+    "global_level": 63,
+    "stage_focus": "King-net construction"
+  },
+  {
+    "id": "chess_advanced_14",
+    "title": "Advanced Level 14: Back-Rank Mate",
+    "difficulty": "Advanced",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Defensive resources \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Advanced",
+    "stage_level": 14,
+    "global_level": 64,
+    "stage_focus": "Defensive resources"
+  },
+  {
+    "id": "chess_advanced_15",
+    "title": "Advanced Level 15: Find the Checkmate",
+    "difficulty": "Advanced",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "Quiet move awareness \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Advanced",
+    "stage_level": 15,
+    "global_level": 65,
+    "stage_focus": "Quiet move awareness"
+  },
+  {
+    "id": "chess_advanced_16",
+    "title": "Advanced Level 16: Back-Rank Mate",
+    "difficulty": "Advanced",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Conversion technique \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Advanced",
+    "stage_level": 16,
+    "global_level": 66,
+    "stage_focus": "Conversion technique"
+  },
+  {
+    "id": "chess_advanced_17",
+    "title": "Advanced Level 17: Find the Checkmate",
+    "difficulty": "Advanced",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "Pattern recognition \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Advanced",
+    "stage_level": 17,
+    "global_level": 67,
+    "stage_focus": "Pattern recognition"
+  },
+  {
+    "id": "chess_advanced_18",
+    "title": "Advanced Level 18: Back-Rank Mate",
+    "difficulty": "Advanced",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Forcing lines \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Advanced",
+    "stage_level": 18,
+    "global_level": 68,
+    "stage_focus": "Forcing lines"
+  },
+  {
+    "id": "chess_advanced_19",
+    "title": "Advanced Level 19: Find the Checkmate",
+    "difficulty": "Advanced",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "Verification \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Advanced",
+    "stage_level": 19,
+    "global_level": 69,
+    "stage_focus": "Verification"
+  },
+  {
+    "id": "chess_advanced_20",
+    "title": "Advanced Level 20: Back-Rank Mate",
+    "difficulty": "Advanced",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Finish accurately \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Advanced",
+    "stage_level": 20,
+    "global_level": 70,
+    "stage_focus": "Finish accurately"
+  },
+  {
+    "id": "chess_advanced_21",
+    "title": "Advanced Level 21: Find the Checkmate",
+    "difficulty": "Advanced",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "Calculate before moving \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Advanced",
+    "stage_level": 21,
+    "global_level": 71,
+    "stage_focus": "Calculate before moving"
+  },
+  {
+    "id": "chess_advanced_22",
+    "title": "Advanced Level 22: Back-Rank Mate",
+    "difficulty": "Advanced",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Move ordering \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Advanced",
+    "stage_level": 22,
+    "global_level": 72,
+    "stage_focus": "Move ordering"
+  },
+  {
+    "id": "chess_advanced_23",
+    "title": "Advanced Level 23: Find the Checkmate",
+    "difficulty": "Advanced",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "King-net construction \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Advanced",
+    "stage_level": 23,
+    "global_level": 73,
+    "stage_focus": "King-net construction"
+  },
+  {
+    "id": "chess_advanced_24",
+    "title": "Advanced Level 24: Back-Rank Mate",
+    "difficulty": "Advanced",
+    "fen": "6k1/5ppp/8/8/8/8/8/3R2K1 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "d1d8"
+    ],
+    "explanation": "Rd8# is a classic back-rank checkmate. The black king is trapped behind its own pawns and has no escape squares.",
+    "learning_tip": "Defensive resources \u2014 Always check if your opponent has created an escape square (luft) for their king before committing to a back-rank attack.",
+    "stage": "Advanced",
+    "stage_level": 24,
+    "global_level": 74,
+    "stage_focus": "Defensive resources"
+  },
+  {
+    "id": "chess_advanced_25",
+    "title": "Advanced Level 25: Find the Checkmate",
+    "difficulty": "Advanced",
+    "fen": "7k/7p/5KQ1/8/8/8/8/8 w - - 0 1",
+    "side_to_move": "w",
+    "correct_moves": [
+      "g6g7"
+    ],
+    "explanation": "Qxg7 is checkmate. The queen attacks the black king on h8, while the white king on f6 protects the queen on g7.",
+    "learning_tip": "Quiet move awareness \u2014 When looking for checkmate, examine checks first and then look at every possible escape square.",
+    "stage": "Advanced",
+    "stage_level": 25,
+    "global_level": 75,
+    "stage_focus": "Quiet move awareness"
+  }
+]
