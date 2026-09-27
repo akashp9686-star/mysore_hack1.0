@@ -12,9 +12,60 @@ if str(PROJECT_ROOT) not in sys.path:
 
 import json
 from backend.database.database import DB_PATH, get_db, initialize_database, reset_database
+from backend.services.question_authoring import create_question_with_tagged_options
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 SEED_PATH = PROJECT_ROOT / "data" / "seed_data.json"
+
+
+MISCONCEPTION_SEED = {
+    3: [
+        {"step_number": 1, "step_text": "2x + 4 = x + 9", "mistakes": []},
+        {
+            "step_number": 2,
+            "step_text": "2x - x = 9 - 4",
+            "mistakes": [
+                {"mistake_description": "Incorrect sign when transposing a constant term.", "wrong_step_text": "x = 13"},
+                {"mistake_description": "Incorrect sign when transposing a variable term.", "wrong_step_text": "x = 5/3"},
+                {"mistake_description": "Arithmetic error when simplifying the constants.", "wrong_step_text": "x = 9"},
+            ],
+        },
+        {"step_number": 3, "step_text": "x = 5", "mistakes": []},
+    ],
+    4: [
+        {"step_number": 1, "step_text": "5x - 3 = 2x + 12", "mistakes": []},
+        {"step_number": 2, "step_text": "5x - 2x = 12 + 3", "mistakes": [
+            {"mistake_description": "Incorrect sign when transposing a constant term.", "wrong_step_text": "x = 3"},
+            {"mistake_description": "Incorrect sign when transposing a variable term.", "wrong_step_text": "x = 15/7"},
+        ]},
+        {"step_number": 3, "step_text": "3x = 15", "mistakes": [
+            {"mistake_description": "Forgetting to divide by the coefficient of x.", "wrong_step_text": "x = 15"},
+        ]},
+        {"step_number": 4, "step_text": "x = 5", "mistakes": []},
+    ],
+    5: [
+        {"step_number": 1, "step_text": "3x + 7 = x + 17", "mistakes": []},
+        {"step_number": 2, "step_text": "3x - x = 17 - 7", "mistakes": [
+            {"mistake_description": "Incorrect sign when transposing a constant term.", "wrong_step_text": "x = 12"},
+            {"mistake_description": "Incorrect sign when transposing a variable term.", "wrong_step_text": "x = 5/2"},
+        ]},
+        {"step_number": 3, "step_text": "2x = 10", "mistakes": [
+            {"mistake_description": "Forgetting to divide by the coefficient of x.", "wrong_step_text": "x = 10"},
+        ]},
+        {"step_number": 4, "step_text": "x = 5", "mistakes": []},
+    ],
+    6: [
+        {"step_number": 1, "step_text": "4x - 8 = 2x + 6", "mistakes": []},
+        {"step_number": 2, "step_text": "4x - 2x = 6 + 8", "mistakes": [
+            {"mistake_description": "Incorrect sign when transposing a constant term.", "wrong_step_text": "x = -1"},
+            {"mistake_description": "Incorrect sign when transposing a variable term.", "wrong_step_text": "x = 7/3"},
+        ]},
+        {"step_number": 3, "step_text": "2x = 14", "mistakes": [
+            {"mistake_description": "Forgetting to divide by the coefficient of x.", "wrong_step_text": "x = 14"},
+        ]},
+        {"step_number": 4, "step_text": "x = 7", "mistakes": []},
+    ],
+}
 
 
 def load_seed_data() -> dict:
@@ -169,6 +220,38 @@ def seed_database() -> None:
                     row["created_at"],
                 ),
             )
+
+    # Pre-load the four legacy Variables-on-Both-Sides questions through the
+    # same insertion/tagging service used by the teacher-authoring API.
+    for question_id, steps in MISCONCEPTION_SEED.items():
+        question = next(item for item in data["questions"] if item["id"] == question_id)
+        create_question_with_tagged_options(
+            question_id=question_id,
+            question_text=question["question_text"],
+            correct_answer=question["correct_answer"],
+            steps=steps,
+            teacher_id=7,
+            concept_id=question["concept_id"],
+            difficulty=question["difficulty"],
+        )
+
+    # Backfill exact selected-option IDs for the seeded wrong answers. The
+    # other seeded answers/questions continue to use the existing mechanism.
+    with get_db() as conn:
+        conn.execute(
+            """
+            UPDATE attempts
+            SET selected_option_id = (
+                SELECT qo.id
+                FROM question_options qo
+                WHERE qo.question_id = attempts.question_id
+                  AND qo.option_text = attempts.answer
+                  AND qo.is_correct = 0
+            )
+            WHERE is_correct = 0
+              AND question_id IN (3, 4, 5, 6)
+            """
+        )
 
     print(f"Database ready: {DB_PATH}")
 

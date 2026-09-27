@@ -2,6 +2,7 @@ from fastapi import APIRouter, HTTPException
 
 from backend.database.database import fetch_one, fetch_all
 from backend.services.adaptive_engine import evaluate_student
+from backend.services.misconception_aggregator import most_frequent_misconception
 
 router = APIRouter(prefix="/students", tags=["progress"])
 
@@ -14,7 +15,7 @@ def progress(student_id: int):
 
     latest_assessment = fetch_one(
         """
-        SELECT topic_id
+        SELECT id, topic_id
         FROM assessments
         WHERE student_id = ?
         ORDER BY id DESC
@@ -51,6 +52,14 @@ def progress(student_id: int):
         }
         concept_progress.append(item)
         if result["status"] == "needs_intervention":
+            misconception = (
+                most_frequent_misconception(
+                    student_id, latest_assessment["id"], concept_id=concept["id"]
+                )
+                if latest_assessment
+                else None
+            )
+            item["likely_misconception"] = misconception["description"] if misconception else None
             weak_concepts.append(item)
 
     overall = fetch_one(

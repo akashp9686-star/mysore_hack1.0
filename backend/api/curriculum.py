@@ -5,51 +5,59 @@ from backend.services.adaptive_engine import evaluate_student
 
 router = APIRouter(prefix="/curriculum", tags=["curriculum"])
 
+# Only Class 8 has live diagnostic content in this demo. The other class cards
+# remain visible so the platform can show the intended K-9 shell, but they are
+# explicitly marked as placeholders and do not create real assessments.
 MATH_CLASSES = {
     5: {
         "title": "Class 5 Mathematics",
-        "topic_id": 10,
-        "topics": ["Whole Numbers & Operations", "Fractions & Decimals", "Perimeter & Area"],
-        "videos": [
-            {"title": "Whole numbers basics", "query": "Class 5 maths whole numbers basics"},
-            {"title": "Fractions & decimals basics", "query": "Class 5 maths fractions decimals basics"},
-        ],
+        "active": False,
+        "status": "coming_soon",
+        "topic_id": None,
+        "concept_id": None,
+        "topics": [],
+        "videos": [],
     },
     6: {
         "title": "Class 6 Mathematics",
-        "topic_id": 11,
-        "topics": ["Integers", "Fractions & Decimals", "Ratio & Proportion"],
-        "videos": [
-            {"title": "Integers basics", "query": "Class 6 maths integers basics"},
-            {"title": "Ratio & proportion basics", "query": "Class 6 maths ratio proportion basics"},
-        ],
+        "active": False,
+        "status": "coming_soon",
+        "topic_id": None,
+        "concept_id": None,
+        "topics": [],
+        "videos": [],
     },
     7: {
         "title": "Class 7 Mathematics",
-        "topic_id": 12,
-        "topics": ["Rational Numbers", "Algebraic Expressions", "Simple Equations"],
-        "videos": [
-            {"title": "Rational numbers basics", "query": "Class 7 maths rational numbers basics"},
-            {"title": "Algebra basics", "query": "Class 7 maths algebraic expressions basics"},
-        ],
+        "active": False,
+        "status": "coming_soon",
+        "topic_id": None,
+        "concept_id": None,
+        "topics": [],
+        "videos": [],
     },
     8: {
         "title": "Class 8 Mathematics",
-        "topic_id": 13,
-        "topics": ["Linear Equations", "Exponents & Powers", "Comparing Quantities"],
+        "active": True,
+        "status": "live_demo",
+        # The expert feature is intentionally attached to the legacy demo path:
+        # Topic 2 -> Linear Equations -> Variables on Both Sides (Concept 2).
+        "topic_id": 2,
+        "concept_id": 2,
+        "topics": ["Algebra", "Linear Equations", "Variables on Both Sides"],
         "videos": [
-            {"title": "Linear equations basics", "query": "Class 8 maths linear equations basics"},
-            {"title": "Exponents & powers basics", "query": "Class 8 maths exponents powers basics"},
+            {"title": "Linear equations basics", "query": "Class 8 maths algebra linear equations variables on both sides"},
+            {"title": "Variables on both sides", "query": "Class 8 maths variables on both sides linear equations"},
         ],
     },
     9: {
         "title": "Class 9 Mathematics",
-        "topic_id": 14,
-        "topics": ["Number Systems", "Polynomials", "Coordinate Geometry"],
-        "videos": [
-            {"title": "Number systems basics", "query": "Class 9 maths number systems basics"},
-            {"title": "Polynomials basics", "query": "Class 9 maths polynomials basics"},
-        ],
+        "active": False,
+        "status": "coming_soon",
+        "topic_id": None,
+        "concept_id": None,
+        "topics": [],
+        "videos": [],
     },
 }
 
@@ -66,24 +74,36 @@ def class_progress(grade: int, student_id: int):
     if not fetch_one("SELECT id FROM students WHERE id = ?", (student_id,)):
         raise HTTPException(404, detail={"error": "student_not_found", "message": "Student not found."})
 
-    topic_id = MATH_CLASSES[grade]["topic_id"]
-    concepts = fetch_all("SELECT id, name FROM concepts WHERE topic_id = ? ORDER BY id", (topic_id,))
-    result = []
-    for concept in concepts:
-        evidence = evaluate_student(student_id, concept["id"])
-        result.append({
-            "concept_id": concept["id"],
-            "name": concept["name"],
-            "accuracy": evidence["accuracy"],
-            "attempt_count": evidence["attempts"],
-            "status": evidence["status"],
-        })
+    class_info = MATH_CLASSES[grade]
+    if not class_info["active"]:
+        return {
+            "grade": grade,
+            "active": False,
+            "status": "coming_soon",
+            "topic_id": None,
+            "overall_progress": 0,
+            "concept_progress": [],
+        }
 
-    overall = round(sum(x["accuracy"] for x in result) / len(result), 1) if result else 0
+    concept_id = class_info["concept_id"]
+    concept = fetch_one("SELECT id, name FROM concepts WHERE id = ?", (concept_id,))
+    if not concept:
+        return {"grade": grade, "active": True, "topic_id": class_info["topic_id"], "overall_progress": 0, "concept_progress": []}
+
+    evidence = evaluate_student(student_id, concept_id)
+    result = [{
+        "concept_id": concept["id"],
+        "name": concept["name"],
+        "accuracy": evidence["accuracy"],
+        "attempt_count": evidence["attempts"],
+        "status": evidence["status"],
+    }]
     return {
         "grade": grade,
-        "topic_id": topic_id,
-        "overall_progress": overall,
+        "active": True,
+        "status": "live_demo",
+        "topic_id": class_info["topic_id"],
+        "overall_progress": round(evidence["accuracy"], 1),
         "concept_progress": result,
     }
 

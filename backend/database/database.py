@@ -20,6 +20,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DATA_DIR = PROJECT_ROOT / "data"
 DB_PATH = DATA_DIR / "hackmysore.db"
 SCHEMA_PATH = Path(__file__).resolve().parent / "schema.sql"
+MIGRATIONS_DIR = Path(__file__).resolve().parent / "migrations"
 
 
 def get_connection() -> sqlite3.Connection:
@@ -51,10 +52,21 @@ def get_db() -> Iterator[sqlite3.Connection]:
 
 
 def initialize_database() -> None:
-    """Create all tables, constraints, triggers and indexes."""
+    """Create the base schema and apply additive, idempotent migrations."""
     schema = SCHEMA_PATH.read_text(encoding="utf-8")
+    migration_tables = (MIGRATIONS_DIR / "001_teacher_misconception_authoring_tables.sql").read_text(encoding="utf-8")
+    migration_selected_option = (MIGRATIONS_DIR / "002_attempt_selected_option.sql").read_text(encoding="utf-8")
+    migration_subjects = (MIGRATIONS_DIR / "003_integrated_subjects.sql").read_text(encoding="utf-8")
+
     with get_db() as conn:
         conn.executescript(schema)
+        conn.executescript(migration_tables)
+
+        columns = {row[1] for row in conn.execute("PRAGMA table_info(attempts)").fetchall()}
+        if "selected_option_id" not in columns:
+            conn.executescript(migration_selected_option)
+
+        conn.executescript(migration_subjects)
 
 
 def fetch_one(

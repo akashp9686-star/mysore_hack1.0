@@ -11,10 +11,23 @@ async function currentAuth(){
   return data?.session?.user || null;
 }
 async function signInGoogle(){
-  if (!supabaseClient) throw new Error('Google login is not configured yet. Add your Supabase URL and publishable key in frontend/supabase-config.js.');
-  const redirectTo = `${location.origin}/path.html`;
-  const {error} = await supabaseClient.auth.signInWithOAuth({provider:'google', options:{redirectTo}});
-  if(error) throw error;
+    if(!supabaseClient) {
+        throw new Error('Google login is not configured yet. Add your Supabase URL and publishable key.');
+    }
+
+    const redirectTo = `${location.origin}/path.html`;
+
+    const { error } = await supabaseClient.auth.signInWithOAuth({
+        provider: 'google',
+        options: {
+            redirectTo,
+            queryParams: {
+                prompt: 'select_account'
+            }
+        }
+    });
+
+    if(error) throw error;
 }
 async function signOut(){
   if(supabaseClient) await supabaseClient.auth.signOut();

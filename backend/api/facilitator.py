@@ -1,6 +1,7 @@
 from fastapi import APIRouter, HTTPException
 from backend.database.database import fetch_all, fetch_one
 from backend.services.adaptive_engine import evaluate_student
+from backend.services.misconception_aggregator import most_frequent_misconception
 
 router = APIRouter(prefix="/facilitator", tags=["facilitator"])
 
@@ -26,7 +27,7 @@ def students_needing_attention():
 def facilitator_student(student_id: int):
     student = fetch_one(
         """
-        SELECT s.id, s.name, s.grade, sub.name AS subject, t.name AS topic
+        SELECT s.id, s.name, s.grade, sub.name AS subject, t.name AS topic, a.id AS latest_assessment_id
         FROM students s
         LEFT JOIN assessments a ON a.student_id = s.id
         LEFT JOIN topics t ON t.id = a.topic_id
@@ -51,11 +52,17 @@ def facilitator_student(student_id: int):
         (student_id,),
     )
 
-    weak = progress_rows[0] if progress_rows else None
+    weak = dict(progress_rows[0]) if progress_rows else None
     evidence = {}
     attempts = []
     if weak:
         evidence = evaluate_student(student_id, weak["concept_id"])
+        misconception = None
+        if student["latest_assessment_id"] is not None:
+            misconception = most_frequent_misconception(
+                student_id, student["latest_assessment_id"], concept_id=weak["concept_id"]
+            )
+        weak["likely_misconception"] = misconception["description"] if misconception else None
         attempts = fetch_all(
             """
             SELECT a.id, a.question_id, q.question_text, a.answer, a.is_correct, a.time_taken, a.created_at

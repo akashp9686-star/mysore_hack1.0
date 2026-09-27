@@ -5,7 +5,7 @@ from fastapi.responses import JSONResponse, FileResponse
 from fastapi.staticfiles import StaticFiles
 
 from backend.config import API_PREFIX, FRONTEND_ORIGINS
-from backend.api import students, assessments, progress, interventions, teachers, resources, facilitator, ai_assistant, curriculum
+from backend.api import students, assessments, progress, interventions, teachers, resources, facilitator, ai_assistant, curriculum, teacher_authoring, subjects
 from backend.database.database import initialize_database
 
 app = FastAPI(
@@ -31,6 +31,8 @@ app.include_router(resources.router, prefix=API_PREFIX)
 app.include_router(facilitator.router, prefix=API_PREFIX)
 app.include_router(ai_assistant.router, prefix=API_PREFIX)
 app.include_router(curriculum.router, prefix=API_PREFIX)
+app.include_router(teacher_authoring.router, prefix=API_PREFIX)
+app.include_router(subjects.router, prefix=API_PREFIX)
 
 
 @app.on_event("startup")

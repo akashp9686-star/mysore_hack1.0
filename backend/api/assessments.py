@@ -25,6 +25,32 @@ class AttemptRequest(BaseModel):
     time_taken: int = Field(default=0, ge=0)
 
 
+def _db_options(question_id: int):
+    return fetch_all(
+        """
+        SELECT id, option_text, is_correct, misconception_id, deviates_at_step
+        FROM question_options
+        WHERE question_id = ?
+        ORDER BY id
+        """,
+        (question_id,),
+    )
+
+
+def _options_for_question(question_id: int) -> list[str]:
+    rows = _db_options(question_id)
+    if rows:
+        return [row["option_text"] for row in rows]
+    return get_options(question_id)
+
+
+def _selected_option_id(question_id: int, answer: str) -> int | None:
+    for row in _db_options(question_id):
+        if row["option_text"].strip().casefold() == answer.strip().casefold():
+            return int(row["id"])
+    return None
+
+
 @router.post("")
 def create_assessment(payload: AssessmentCreateRequest):
     if payload.assessment_type not in ALLOWED_ASSESSMENT_TYPES:
@@ -111,7 +137,7 @@ def get_assessment(assessment_id: int, concept_id: int | None = None):
     question_items = []
     for q in questions:
         item = dict(q)
-        item["options"] = get_options(q["id"])
+        item["options"] = _options_for_question(q["id"])
         item.pop("accuracy", None)
         item.pop("concept_attempts", None)
         question_items.append(item)
@@ -158,8 +184,8 @@ def submit_attempt(assessment_id: int, payload: AttemptRequest):
         cursor = db.execute(
             """
             INSERT INTO attempts
-            (assessment_id, student_id, question_id, answer, is_correct, time_taken)
-            VALUES (?, ?, ?, ?, ?, ?)
+            (assessment_id, student_id, question_id, answer, is_correct, time_taken, selected_option_id)
+            VALUES (?, ?, ?, ?, ?, ?, ?)
             """,
             (
                 assessment_id,
@@ -168,6 +194,7 @@ def submit_attempt(assessment_id: int, payload: AttemptRequest):
                 payload.answer.strip(),
                 int(correct),
                 payload.time_taken,
+                _selected_option_id(payload.question_id, payload.answer),
             ),
         )
         attempt_id = cursor.lastrowid
@@ -208,7 +235,74 @@ def submit_attempt(assessment_id: int, payload: AttemptRequest):
         return f"The correct answer is {correct_answer}. Review the {concept_name} concept and try a similar example."
 
     concept_name_value = concept_row["name"] if concept_row else "Mathematics concept"
-    explanation = build_explanation(question["question_text"], question["correct_answer"], concept_name_value)
+
+    # For teacher-authored diagnostic questions, use the selected option's
+    # stored misconception and exact step to provide specific feedback.
+    # Legacy questions continue using the existing explanation logic.
+    selected_option_id = _selected_option_id(payload.question_id, payload.answer)
+
+    diagnostic_option = None
+    diagnostic_step = None
+
+    if not correct and selected_option_id is not None:
+        diagnostic_option = fetch_one(
+            """
+            SELECT qo.id,
+                   qo.option_text,
+                   qo.misconception_id,
+                   qo.deviates_at_step,
+                   m.description AS misconception_description
+            FROM question_options qo
+            LEFT JOIN misconceptions m
+                ON m.id = qo.misconception_id
+            WHERE qo.id = ?
+              AND qo.question_id = ?
+              AND qo.is_correct = 0
+            """,
+            (selected_option_id, payload.question_id),
+        )
+
+        if diagnostic_option and diagnostic_option["deviates_at_step"] is not None:
+            diagnostic_step = fetch_one(
+                """
+                SELECT step_number, step_text
+                FROM question_steps
+                WHERE question_id = ?
+                  AND step_number = ?
+                LIMIT 1
+                """,
+                (
+                    payload.question_id,
+                    diagnostic_option["deviates_at_step"],
+                ),
+            )
+
+    if diagnostic_option and diagnostic_option["misconception_description"]:
+        step_number = diagnostic_option["deviates_at_step"]
+        step_text = diagnostic_step["step_text"] if diagnostic_step else None
+        misconception = diagnostic_option["misconception_description"]
+
+        explanation_parts = [
+            f"You went wrong at Step {step_number}."
+            if step_number is not None
+            else "Your selected option matches a tagged misconception.",
+            f"Common mistake: {misconception}",
+        ]
+
+        if step_text:
+            explanation_parts.append(f"Correct step: {step_text}")
+
+        explanation_parts.append(
+            f"The correct final answer is {question['correct_answer']}."
+        )
+
+        explanation = " ".join(explanation_parts)
+    else:
+        explanation = build_explanation(
+            question["question_text"],
+            question["correct_answer"],
+            concept_name_value,
+        )
 
     progress = fetch_one(
         """
@@ -261,3 +355,4 @@ def submit_attempt(assessment_id: int, payload: AttemptRequest):
             "ai_analysis": ai_analysis,
         },
     }
+

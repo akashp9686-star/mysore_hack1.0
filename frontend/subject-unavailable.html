@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Subject not yet available · Personalized Learning</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">P</span><span>Personalized Learning</span></a>
+      <a class="btn btn-secondary" href="goal.html">Back to subjects</a>
+    </div>
+  </header>
+  <main class="page">
+    <div class="container">
+      <section class="card card-pad unavailable-card">
+        <div class="eyebrow">Integrated subject shell</div>
+        <h1 id="title">Subject</h1>
+        <p class="unavailable-message">This subject's diagnostic content is still being built. Try Mathematics → Class 8 → Linear Equations to see the full experience.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="math.html">Explore Mathematics</a>
+          <a class="btn btn-secondary" href="goal.html">Choose another subject</a>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script>
+    const subject = new URLSearchParams(location.search).get('subject') || 'This subject';
+    document.getElementById('title').textContent = subject;
+  </script>
+</body>
+</html>

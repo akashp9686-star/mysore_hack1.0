@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Teacher Question Authoring · Personalized Learning</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="teacher.html"><span class="brand-mark">L</span><span>Teacher authoring</span></a>
+      <div class="author-nav">
+        <a class="btn btn-secondary" href="teacher.html">Teacher support</a>
+        <a class="btn btn-secondary" href="facilitator.html">Facilitator</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="container authoring-page">
+      <div class="page-head">
+        <div>
+          <div class="eyebrow">Teacher-authored diagnostic knowledge</div>
+          <h1>Build a diagnostic question</h1>
+          <p>Tell the system where students typically make a mistake. The wrong-option engine turns that teacher knowledge into a misconception-linked MCQ option.</p>
+        </div>
+      </div>
+
+      <div class="alert alert-info">
+        <strong>Live demo scope</strong>
+        <div style="margin-top:6px">Class 8 → Mathematics → Algebra → Linear Equations → Variables on Both Sides</div>
+        <div class="muted" style="margin-top:6px">Teacher authentication is not required for this demo. You enter the mistake description; you do not enter the wrong answer.</div>
+      </div>
+
+      <section class="card card-pad authoring-card" id="new-section">
+        <div class="section-title" style="margin-top:0">
+          <h2>Create a question</h2>
+          <span>The engine generates the distractors.</span>
+        </div>
+
+        <div class="grid-2">
+          <div class="form-field">
+            <label for="teacher-id">Teacher ID (optional)</label>
+            <input id="teacher-id" type="number" min="1" placeholder="e.g. 7">
+          </div>
+          <div class="form-field">
+            <label for="question-text">Question text</label>
+            <input id="question-text" placeholder="e.g. Solve: 6x - 4 = 3x + 11.">
+          </div>
+          <div class="form-field form-field-wide">
+            <label for="correct-answer">Correct final answer</label>
+            <input id="correct-answer" placeholder="e.g. x = 5">
+          </div>
+        </div>
+
+        <div class="section-title">
+          <h2>Correct solution</h2>
+          <span>One box per step.</span>
+        </div>
+        <div id="steps" class="authoring-steps"></div>
+        <div class="hero-actions" style="margin-top:18px">
+          <button class="btn btn-secondary" id="add-step" type="button">+ Add step</button>
+          <button class="btn btn-primary" id="save-new" type="button">Generate & save question</button>
+        </div>
+        <div id="new-status" style="margin-top:16px"></div>
+        <div id="generated-options" class="generated-options" style="margin-top:18px"></div>
+      </section>
+
+      <section class="card card-pad authoring-card">
+        <div class="section-title" style="margin-top:0">
+          <h2>Edit tagged mistakes</h2>
+          <span>Load an existing Variables-on-Both-Sides question.</span>
+        </div>
+        <div class="grid-2">
+          <div class="form-field">
+            <label for="existing-id">Question ID</label>
+            <input id="existing-id" type="number" min="1" placeholder="3, 4, 5, 6 or a teacher-created question">
+          </div>
+          <div class="hero-actions author-load-actions">
+            <button class="btn btn-secondary" id="load-existing" type="button">Load question</button>
+          </div>
+        </div>
+        <div id="existing" style="margin-top:18px">
+          <div class="empty">No question loaded.</div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="js/teacher-author.js"></script>
+</body>
+</html>
